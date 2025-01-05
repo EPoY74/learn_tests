@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "learn-tests"
+version = "0.1.0"
+description = ""
+authors = ["Eugenii B. Petrov <127658418+EPoY74@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pylint = "^3.3.3"
+pytest = "^8.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
