@@ -5,25 +5,17 @@ import pytest
 
 from learn_tests.less1 import division
 
-
-def test_is_division_good():
+@pytest.mark.parametrize('a, b, result',
+                         [(10,5,2),
+                          (-10, 5, -2),
+                          (10, -5, -2),
+                          (-10, -5, 2),
+                          (5, 2, 2.5),
+                          (-5, 2, -2.5),
+                          (5, -2, -2.5),
+                          (-5,-2, 2.5)] )
+def test_is_division_good(a:int, b:int, result: float):
     """Тестирую деление
     """
-    assert division(10,2) == 5
+    assert division(a,b) == result
 
-
-def test_is_division_good_negdtiv_1():
-    """Делим А на -В
-    """
-    assert division(10,-2) == -5
-
-
-def test_is_division_good_negdtiv_2():
-    """Делим -А на В
-    """
-    assert division(-12,2) == -6
-
-def test_is_division_good_negdtiv_3():
-    """Делим -А на -В
-    """
-    assert division(-10,-2) == 5
