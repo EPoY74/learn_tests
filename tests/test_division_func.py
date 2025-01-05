@@ -19,3 +19,8 @@ def test_is_division_good(a:int, b:int, result: float):
     """
     assert division(a,b) == result
 
+
+def test_is_zero_division():
+    with pytest.raises(ZeroDivisionError):
+        division(5,0) 
+
