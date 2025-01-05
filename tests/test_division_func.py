@@ -21,7 +21,7 @@ def test_is_division_good_negdtiv_1():
 def test_is_division_good_negdtiv_2():
     """Делим -А на В
     """
-    assert division(-12,-2) == -6
+    assert division(-12,2) == -6
 
 def test_is_division_good_negdtiv_3():
     """Делим -А на -В
